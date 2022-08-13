@@ -1,0 +1,447 @@
+                                            /* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Bree Serif', Ubuntu, Times, serif;
+}
+                                            /* Navigation Bar Styling */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+/* Navigation Bar Name(h1) Styling */
+#navbar h1{
+    font-weight: bold;
+    color: white;
+    margin: 5px;
+    padding: 2px;
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.6;
+    cursor: pointer;
+}
+#navbar ul{
+    text-align: right;
+    display: flex;
+    margin-left: 400px;
+}
+#navbar ul li{
+    list-style-type: none;
+    font-size: 20px;
+}
+#navbar ul li::after{
+    content: "";
+    height: 2px;
+    width: 0%;
+    display: flex;
+    background: #f44336;
+    margin: auto;
+    transition: 1s;
+}
+#navbar ul li:hover::after{
+    width: 80%;
+}
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+#navbar ul li a:hover{
+    background-color: rgb(127, 126, 126);
+}
+            /* Media Queries for Navigation Bar */
+@media (min-width: 768px) and (max-width: 991px) {  /* For Tablets */
+    #navbar {
+        flex-direction: column;
+    }
+    #navbar h1{
+        font-weight: bold;
+        color: white;
+        margin: 4px;
+        padding: 1.5px;
+    }
+    #navbar::before{
+        content: "";
+        background-color: black;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        opacity: 0.6;
+        cursor: pointer;
+    }
+    #navbar ul{
+        text-align: right;
+        display: inline-flex;
+        margin-left: 50px;
+    }
+    #navbar ul li{
+        font-size: 15px;
+    }
+    #navbar ul li a{
+        font-size: 1rem;
+        padding: 0px 7px;
+        padding-bottom: 8px;
+    }
+}
+@media (max-width: 767px) {     /* For Small Mobiles */
+    #navbar{
+        flex-direction: column;
+    }
+    #navbar h1{
+        font-weight: bold;
+        color: white;
+        margin: 3px;
+        padding: 1px;
+    }
+    #navbar::before{
+        content: "";
+        background-color: black;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        opacity: 0.6;
+        cursor: pointer;
+    }
+    #navbar ul{
+        text-align: right;
+        display: inline-flex;
+        margin-left: 30px;
+    }
+    #navbar ul li{
+        font-size: 12px;
+    }
+    #navbar ul li a{
+        font-size: 0.7rem;
+        padding: 0px 5px;
+        padding-bottom: 6px;
+    }
+}
+                                            /* Navigation Bar Styling End */
+                                            /* Logo and Image Styling */
+#logo{
+    margin: 15px 15px ;
+}
+#logo img{
+    height: 50px;
+    margin: 0px 0px;
+}
+            /* Media Queries for Logo */
+@media (min-width: 768px) and (max-width: 991px) {  /* For Tablets */
+    #logo{
+        margin: 10px 10px 6px 10px;
+    }
+    #logo img{
+        height: 40px;
+        margin: 0px 0px;
+    }
+}
+@media (max-width: 767px) {     /* For Small Mobiles */
+    #logo{
+        margin: 8px 8px 5px 8px;
+    }
+    #logo img{
+        height: 30px;
+        margin: 0px 0px;
+    }
+}
+                                            /* Home Section Styling */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height:460px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 110px;
+}
+#home::before{
+    content: "";
+    background: url("graphics/homebackground.png") no-repeat center center/cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 1;
+}
+#home h1{
+    color: rgb(20, 20, 20);
+    text-align: center;
+}
+#home h2{
+    color: rgb(20, 20, 20);
+    text-align: center;
+    font-size: 35px;
+}
+            /* Media Queries for Logo */
+@media (min-width: 768px) and (max-width: 991px) {  /* For Tablets */
+    #home{
+        display: flex;
+        flex-direction: column;
+        padding: 2px 170px;
+        height: 350px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 90px;
+    }
+    #home::before{
+        content: "";
+        background: url("graphics/homebackground.png") no-repeat center center/cover;
+        position: absolute;
+        height: 45%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        opacity: 1;
+    }
+    #home h2{
+        text-align: center;
+        font-size: 28px;
+    }
+}
+@media (max-width: 767px){  /* For Small Mobiles */
+    #home{
+        display: flex;
+        flex-direction: column;
+        padding: 2px 170px;
+        height: 235px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 70px;
+    }
+    #home::before{
+        content: "";
+        background: url("graphics/homebackground.png") no-repeat center center/cover;
+        position: absolute;
+        height: 31%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        opacity: 1;
+    }
+    #home h2{
+        font-size: 20px;
+    }
+}
+                                            /* Home Section Styling End */
+                                            /* Services Section */
+#serviceheading{
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 0px 50px 10px 50px;
+    border: 3px double rgb(182, 178, 178);
+    border-radius: 30px;
+    background: #dfdfdf;
+}
+.services{
+    box-sizing: border-box;
+    margin: 34px;
+    margin-left: 100px;
+    display: flex;
+}
+.services .box{
+    border: 2px solid rgb(182, 178, 178);
+    padding: 34px;
+    margin: 3px 6px;
+    border-radius: 30px;
+    background: #dfdfdf;
+}
+.services .box img{
+    height: 200px;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    text-align: center;
+}
+.box a{
+    padding: 5px 20px;
+    margin-left: 90px;
+    margin-right: 90px; 
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    color: rgb(20, 20, 20);
+}
+.box a::after{
+    content: "";
+    height: 2px;
+    width: 0%;
+    display: flex;
+    background: #f44336;
+    margin: auto;
+    margin-left: 104px;
+    transition: 1s;
+}
+.box a:hover::after{
+    width: 24%;
+}
+@media (min-width: 768px) and (max-width: 991px) {  /* For Tablets */
+    #serviceheading{
+        margin: 0px 200px 15px 200px;
+        padding: 5px 50px 10px 50px;
+    }
+    .services{
+        box-sizing: border-box;
+        display: inline;
+    }
+    .services .box{
+        width: 70%;
+        padding: 28px;
+        margin: 0px 110px 30px 110px;   
+    }
+    .services .box img{
+        height: 350px;
+    }
+    .box a{
+        padding: 5px 20px;
+        margin-left: 90px;
+        margin-right: 90px; 
+    }
+    .box a:hover::after{
+        width: 9.8%;
+    }
+}
+@media (max-width: 767px) {  /* For Small Mobiles */
+    #serviceheading{
+        margin: 0px 200px 0px 200px;
+        padding: 5px 50px 10px 50px;
+    }
+    .services{
+        box-sizing: border-box;
+        display: inline;
+    }
+    .services .box{
+        width: 70%;
+        padding: 28px;
+        margin: 10px 80px 10px 80px;
+    }
+    .services .box img{
+        height: 300px;
+    }
+    .box a{
+        padding: 5px 20px;
+        margin-left: 90px;
+        margin-right: 90px; 
+    }
+    .box a:hover::after{
+        width: 13%;
+    }
+}
+                                            /* Services Section End */
+                                            /* Feedback Section */
+#feedback{
+    position: relative;
+}
+#feedback::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.6;
+    background: url(graphics/feedback.jpg) no-repeat center center/cover;
+}
+#feedback{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 34px;
+}
+#feedbackbox form{
+    width: 40%;
+    margin-left: 30px;
+}
+#feedbackbox label{
+    font-size: 20px;
+}
+#feedbackbox textarea{
+    width: 95%;
+    height: 50%;
+    padding: 8px;
+    border-radius: 9px;
+    font-size: 17px;
+}
+@media (min-width: 768px) and (max-width: 991px) {  /* For Tablets */ 
+    #feedback{
+        padding-bottom: 10px;
+    }
+    #feedbackbox textarea{
+        width: 90%;
+        height: 80px;
+        padding: 8px;
+    }
+}
+@media (max-width: 767px) {  /* For Small Mobiles */ 
+    #feedback{
+        padding-bottom: 10px;
+    }
+    #feedbackbox textarea{
+        width: 90%;
+        height: 80px;
+        padding: 8px;
+    }
+}
+                                            /* Feedback Section End */
+                                            /* Footer */
+footer{
+    background-color: black;
+    color: white;
+    padding: 9px 20px;
+
+}
+                                            /* Utility Classes */
+.h-primary{
+    font-size: 60px;
+    padding: 12px;
+}
+@media (min-width: 768px) and (max-width: 991px) {  /* For Tablets */
+    .h-primary{
+        font-size: 40px;
+        padding: 10px;
+    }
+}
+@media (max-width: 767px){  /* For Small Mobiles */
+    .h-primary{
+        font-size: 30px;
+        padding: 7px;
+    }
+}
+.h-secondary{
+    font-size: 36px;
+    padding: 12px;
+}
+@media (min-width: 768px) and (max-width: 991px) {  /* For Tablets */
+    .h-secondary{
+        font-size: 30px;
+        padding: 10px;
+    }
+}
+@media (max-width: 767px){  /* For Small Mobiles */
+    .h-secondary{
+        font-size: 24px;
+        padding: 7px;
+    }
+}
+.text-center{
+    text-align: center;
+}
